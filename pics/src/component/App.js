@@ -6,7 +6,7 @@ import ImageList from "./ImageList";
 class App extends React.Component {
   state = {images: []}; //empty array
 
-  onSearchSubmit = async term => {
+  onSearchSubmit = async term => { // promise-based behavior
     const response = await unsplash.get("/search/photos", {
       params: { query: term }    
     });

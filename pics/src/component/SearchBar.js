@@ -9,8 +9,8 @@ class SearchBar extends React.Component {
   state = { term: "" };
 
   onFormSubmit = (event) => {
-    event.preventDefault();
-    this.props.onSubmit(this.state.term);
+    event.preventDefault(); //stop from reloading webpage upon submitting the form
+    this.props.onSubmit(this.state.term); //set user input to term
   }
 
   render = () => {
